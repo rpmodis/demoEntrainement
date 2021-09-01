@@ -20,21 +20,35 @@ class Client
     private $id;
 
     /**
+     * Nom du client
+     *
+     * @var string
+     *
      * @ORM\Column(type="string", length=100)
      */
     private $nom;
 
     /**
+     * Prénom du client
+     *
+     * @var string
+     *
      * @ORM\Column(type="string", length=100)
      */
     private $prenom;
 
     /**
+     * Email du client
+     *
+     * @var string
+     *
      * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
+     * Indique s'il s'agit d'un client final ou d'un intermédiaire
+     *
      * @var boolean
      *
      * @ORM\Column(type="boolean", options={"default": false})
