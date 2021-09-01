@@ -39,7 +39,7 @@ class Client
      *
      * @ORM\Column(type="boolean", options={"default": false})
      */
-    private $final;
+    private $final = false;
 
     /**
      * Get ID
