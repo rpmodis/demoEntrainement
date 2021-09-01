@@ -35,6 +35,13 @@ class Client
     private $email;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(type="boolean", options={"default": false})
+     */
+    private $final;
+
+    /**
      * Get ID
      *
      * @return int|null
@@ -115,4 +122,29 @@ class Client
 
         return $this;
     }
+
+    /**
+     * Is final
+     *
+     * @return bool
+     */
+    public function isFinal(): bool
+    {
+        return $this->final;
+    }
+
+    /**
+     * Set final
+     *
+     * @param bool $final
+     *
+     * @return Client
+     */
+    public function setFinal(?bool $final): Client
+    {
+        $this->final = (bool)$final;
+
+        return $this;
+    }
+
 }
